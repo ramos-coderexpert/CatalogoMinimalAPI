@@ -107,6 +107,10 @@ app.MapPut("/produtos/{id:int}", async (int id, Produto produto, AppDBContext db
 
     produtoDB.Nome = produto.Nome;
     produtoDB.Descricao = produto.Descricao;
+    produtoDB.Preco = produto.Preco;
+    produtoDB.Imagem = produto.Imagem;
+    produtoDB.DataCompra = produto.DataCompra;
+    produtoDB.Estoque = produto.Estoque;
 
     await db.SaveChangesAsync();
 
